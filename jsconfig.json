@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "useUnknownInCatchVariables": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "types": ["jest"],
+    "baseUrl": "./",
+    "incremental": true
+  },
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "coverage"
+  ],
+  "include": ["src/**/*.jsx", "./.eslintrc.js"]
+}
