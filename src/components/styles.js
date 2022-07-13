@@ -11,4 +11,13 @@ export const styles = () => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  editorsArea: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  editorContainer: {
+    margin: 20,
+  },
 });

@@ -7,8 +7,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import ReactEasyCropContainer from './ReactEasyCropContainer/ReactEasyCropContainer';
-import { styles } from './styles';
 import { ReactImageCropContainer } from './ReactImageCropContainer/ReactImageCropContainer';
+
+import { styles } from './styles';
 
 const ImageEditSection = ({ classes }) => {
   const [image, setImage] = useState(undefined);
@@ -33,12 +34,16 @@ const ImageEditSection = ({ classes }) => {
           </Button>
         )}
       </div>
-
-      {/*
-      <ReactEasyCropContainer imageURL={image[1]} />
-*/}
-
-      {image && <ReactImageCropContainer imageURL={image[1]} />}
+      {image && (
+        <div className={classes.editorsArea}>
+          <div className={classes.editorContainer}>
+            <ReactEasyCropContainer imageURL={image[1]} />
+          </div>
+          <div className={classes.editorContainer}>
+            <ReactImageCropContainer imageURL={image[1]} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
