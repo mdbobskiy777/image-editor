@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading,no-unused-vars,no-shadow,react/prop-types */
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { useDropzone } from 'react-dropzone';
 
@@ -16,12 +16,18 @@ const ImageEditSection = ({ classes }) => {
 
   const onDrop = useCallback((acceptedFiles) => {
     acceptedFiles.forEach((file) => {
-      console.log('file', file);
       setImage([file, URL.createObjectURL(file)]);
     });
   }, []);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
+  useEffect(() => {
+    return () => {
+      if (image) {
+        URL.revokeObjectURL(image);
+      }
+    };
+  }, [image]);
   return (
     <div className={classes.mainContainer}>
       <div className={classes.dropArea} {...getRootProps()}>
