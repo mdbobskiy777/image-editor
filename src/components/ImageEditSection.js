@@ -10,6 +10,7 @@ import ReactEasyCropContainer from './ReactEasyCropContainer/ReactEasyCropContai
 import { ReactImageCropContainer } from './ReactImageCropContainer/ReactImageCropContainer';
 
 import { styles } from './styles';
+import { ReactAdvancedCropper } from './ReactAdvancedCropper/ReactAdvancedCropper';
 
 const ImageEditSection = ({ classes }) => {
   const [image, setImage] = useState(undefined);
@@ -47,6 +48,9 @@ const ImageEditSection = ({ classes }) => {
           </div>
           <div className={classes.editorContainer}>
             <ReactImageCropContainer imageURL={image[1]} />
+          </div>
+          <div className={classes.editorContainer}>
+            <ReactAdvancedCropper imageURL={image[1]} />
           </div>
         </div>
       )}

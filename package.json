@@ -13,6 +13,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
+    "react-advanced-cropper": "^0.9.0",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.2",
     "react-easy-crop": "^4.4.0",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.53.0"
   }
 }
