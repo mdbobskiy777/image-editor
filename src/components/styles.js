@@ -18,6 +18,6 @@ export const styles = () => ({
     flexDirection: 'row',
   },
   editorContainer: {
-    margin: 20,
+    margin: 10,
   },
 });
