@@ -51,8 +51,5 @@ export const styles = (theme) => ({
   },
   croppedImageDiv: {
     marginTop: 10,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 });
