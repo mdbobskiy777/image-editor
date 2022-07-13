@@ -29,7 +29,6 @@ export const ReactImageCropContainer = ({ imageURL }) => {
     [completedCrop, scale, rotate]
   );
 
-  console.log('previewSrc: ', previewSrc);
   return (
     <div>
       {Boolean(imageURL) && (
@@ -37,7 +36,6 @@ export const ReactImageCropContainer = ({ imageURL }) => {
           crop={crop}
           onChange={(_, percentCrop) => setCrop(percentCrop)}
           onComplete={(c) => {
-            console.log('completed crop: ', c);
             setCompletedCrop(c);
           }}
         >

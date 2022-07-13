@@ -50,7 +50,7 @@ export const styles = (theme) => ({
     },
   },
   croppedImageDiv: {
-    margin: 10,
+    marginTop: 10,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

@@ -20,6 +20,5 @@ export const imgPreview = async (image, crop, scale = 1, rotate = 0) => {
   }
 
   previewUrl = URL.createObjectURL(blob);
-  console.log('previewUrl: ', previewUrl);
   return previewUrl;
 };

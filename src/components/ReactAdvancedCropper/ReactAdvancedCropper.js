@@ -15,8 +15,6 @@ export const ReactAdvancedCropper = ({ imageURL }) => {
   };
   const rotate = (angle) => {
     if (cropperRef.current) {
-      console.log(cropperRef.current);
-
       cropperRef.current.rotateImage(angle);
     }
   };
