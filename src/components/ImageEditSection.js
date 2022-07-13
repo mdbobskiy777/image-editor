@@ -6,8 +6,9 @@ import { useDropzone } from 'react-dropzone';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import ReactEasyCropContainer from './ReactEasyCropContainer';
+import ReactEasyCropContainer from './ReactEasyCropContainer/ReactEasyCropContainer';
 import { styles } from './styles';
+import { ReactImageCropContainer } from './ReactImageCropContainer/ReactImageCropContainer';
 
 const ImageEditSection = ({ classes }) => {
   const [image, setImage] = useState(undefined);
@@ -32,7 +33,12 @@ const ImageEditSection = ({ classes }) => {
           </Button>
         )}
       </div>
-      <ReactEasyCropContainer image={image} />
+
+      {/*
+      <ReactEasyCropContainer imageURL={image[1]} />
+*/}
+
+      {image && <ReactImageCropContainer imageURL={image[1]} />}
     </div>
   );
 };

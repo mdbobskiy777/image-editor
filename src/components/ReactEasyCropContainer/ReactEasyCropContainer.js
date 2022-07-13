@@ -11,7 +11,7 @@ import { withStyles } from '@material-ui/core/styles';
 import getCroppedImg from './cropImage';
 import { styles } from './styles';
 
-const ReactEasyCropContainer = ({ image, classes }) => {
+const ReactEasyCropContainer = ({ imageURL, classes }) => {
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [rotation, setRotation] = useState(0);
   const [zoom, setZoom] = useState(1);
@@ -24,7 +24,7 @@ const ReactEasyCropContainer = ({ image, classes }) => {
 
   const showCroppedImage = useCallback(async () => {
     try {
-      const croppedImage = await getCroppedImg(image[1], croppedAreaPixels, rotation);
+      const croppedImage = await getCroppedImg(imageURL, croppedAreaPixels, rotation);
       setCroppedImage(croppedImage);
     } catch (e) {
       console.error(e);
@@ -37,11 +37,11 @@ const ReactEasyCropContainer = ({ image, classes }) => {
 
   return (
     <div className={classes.cropArea}>
-      {image && (
+      {imageURL && (
         <div>
           <div className={classes.cropContainer}>
             <Cropper
-              image={image[1]}
+              image={imageURL}
               crop={crop}
               rotation={rotation}
               zoom={zoom}
